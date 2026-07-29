@@ -1,0 +1,510 @@
+{
+  "id": "dea31662-5e48-438b-a790-e761195eb793",
+  "version": "2.0",
+  "name": "saher",
+  "url": "https://saherindia.org",
+  "tests": [{
+    "id": "75dd6e75-814a-4362-9b32-7dd9edf825c9",
+    "name": "test-landing-page",
+    "commands": [{
+      "id": "7a72e1e8-9382-40ec-b151-7e948e200abd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fd62677-29ed-41f8-920e-1c8b0f3d7935",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da52d356-680c-4c7e-9573-06b5232c4989",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "212585dd-f441-4c00-af12-2aa7cbe3833d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('programs')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aad38796-6506-46ec-b9ac-8f4e8409efa6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('gallery')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62518200-d13e-4164-9ed7-013b707eed11",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-tab:nth-child(2)",
+      "targets": [
+        ["css=.g-tab:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick=\"switchGallery('sports', this)\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//section/div/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d83dc135-51a7-494b-a5d7-dbffb9d27090",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-tab:nth-child(3)",
+      "targets": [
+        ["css=.g-tab:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick=\"switchGallery('mohalla', this)\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//section/div/div/button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "402ca915-3c37-48c1-ab01-c1d81559138c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-tab:nth-child(4)",
+      "targets": [
+        ["css=.g-tab:nth-child(4)", "css:finder"],
+        ["xpath=//button[@onclick=\"switchGallery('neenv', this)\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div/button[4]", "xpath:idRelative"],
+        ["xpath=//div/div/button[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e32220a-1915-4878-8614-a572eaa4dcc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c15fac0-7935-4628-9394-840aaed220b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline:nth-child(2)",
+      "targets": [
+        ["css=.btn-outline:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('about')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f732dad-542e-42c8-81ab-0804e7d4649b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.team-card:nth-child(7) .team-photo",
+      "targets": [
+        ["css=.team-card:nth-child(7) .team-photo", "css:finder"],
+        ["xpath=//img[@alt='Yusuf Abdul Latif Ansari']", "xpath:img"],
+        ["xpath=//section[@id='team']/div/div/article[7]/div/img", "xpath:idRelative"],
+        ["xpath=//article[7]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29178edf-ba02-4130-9cb9-1ba097dc431c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.team-card:nth-child(7) .team-photo",
+      "targets": [
+        ["css=.team-card:nth-child(7) .team-photo", "css:finder"],
+        ["xpath=//img[@alt='Yusuf Abdul Latif Ansari']", "xpath:img"],
+        ["xpath=//section[@id='team']/div/div/article[7]/div/img", "xpath:idRelative"],
+        ["xpath=//article[7]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bca198a7-fd50-48e7-b171-efa836aff267",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f5519bc-2098-4995-9d83-74541aa30346",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82b02c6e-ba82-4beb-9a2c-e4afffe078ff",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=li > .active",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fc7d1b8-3cbf-4cd2-b671-bb4d1ff350c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gallery-shortcut-btn:nth-child(2)",
+      "targets": [
+        ["css=.gallery-shortcut-btn:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='goToGallery(null)']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "549f61df-1fa3-454c-9e96-a7caf2282487",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-tab:nth-child(2)",
+      "targets": [
+        ["css=.g-tab:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick=\"switchGallery('sports', this)\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//section/div/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "411d2fc7-68ef-47a6-807f-f24d47b1692c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-tab:nth-child(3)",
+      "targets": [
+        ["css=.g-tab:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick=\"switchGallery('mohalla', this)\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//section/div/div/button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eb67995-9c5f-4c0f-81fe-08cec2f334a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-tab:nth-child(4)",
+      "targets": [
+        ["css=.g-tab:nth-child(4)", "css:finder"],
+        ["xpath=//button[@onclick=\"switchGallery('neenv', this)\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section/div/div/button[4]", "xpath:idRelative"],
+        ["xpath=//div/div/button[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c9e658b-e495-4b2b-9564-3e7d9ba673d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26148bc0-ec94-4bad-8bab-c9961f3d0847",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gallery-shortcut-btn:nth-child(3)",
+      "targets": [
+        ["css=.gallery-shortcut-btn:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick=\"goToGallery('parwaaz')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c72abc5b-0dc5-4404-83d4-fb7d63c1d849",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('home')\"])[2]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c17b6376-8e2a-4e10-b2a5-840c16580c6c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container > .btn",
+      "targets": [
+        ["css=.container > .btn", "css:finder"],
+        ["xpath=(//button[@onclick=\"Router.go('programs')\"])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/section[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62b40b08-d06f-4ad8-9b48-3f8aae19c439",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('stories')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[4]/button", "xpath:idRelative"],
+        ["xpath=//li[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50fb209e-bb14-4f31-bdfd-62d42bfb149e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.story-card:nth-child(1) > .story-card-body",
+      "targets": [
+        ["css=.story-card:nth-child(1) > .story-card-body", "css:finder"],
+        ["xpath=//div[@id='stories-listing']/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7a48aed-1e85-4472-bd20-be15d8de69b2",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('stories')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[4]/button", "xpath:idRelative"],
+        ["xpath=//li[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeb5220e-1efb-4261-995d-33fd8adc68b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.story-card:nth-child(2) > .story-card-body",
+      "targets": [
+        ["css=.story-card:nth-child(2) > .story-card-body", "css:finder"],
+        ["xpath=//div[@id='stories-listing']/article[2]/div", "xpath:idRelative"],
+        ["xpath=//article[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f02f312-0a6b-4bcc-88cb-0c8282bbc7b2",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.story-card:nth-child(2) > .story-card-body",
+      "targets": [
+        ["css=.story-card:nth-child(2) > .story-card-body", "css:finder"],
+        ["xpath=//div[@id='stories-listing']/article[2]/div", "xpath:idRelative"],
+        ["xpath=//article[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9753a74a-b058-4232-b104-b4c1747dd8ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('stories')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[4]/button", "xpath:idRelative"],
+        ["xpath=//li[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "739fbe17-7e30-4136-b627-ebfccb5fb202",
+      "comment": "",
+      "command": "click",
+      "target": "css=.story-card:nth-child(3) > .story-card-body",
+      "targets": [
+        ["css=.story-card:nth-child(3) > .story-card-body", "css:finder"],
+        ["xpath=//div[@id='stories-listing']/article[3]/div", "xpath:idRelative"],
+        ["xpath=//article[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e28254e9-192c-4d6e-bf0c-2e60bcc0ab56",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('events')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[5]/button", "xpath:idRelative"],
+        ["xpath=//li[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb9090b8-12e5-4f30-9796-d6c3286633df",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('events')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[5]/button", "xpath:idRelative"],
+        ["xpath=//li[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "875e8efa-d802-4134-a3bc-8dee45b7ad5d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('events')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[5]/button", "xpath:idRelative"],
+        ["xpath=//li[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94efc100-0a60-47ad-8cf2-7ddb0f664f2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.event-card:nth-child(1) p",
+      "targets": [
+        ["css=.event-card:nth-child(1) p", "css:finder"],
+        ["xpath=//div[@id='app']/section/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'A year long programme. A journey from Self to Society- Exploration and Action.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "06cb2b61-c329-4e33-89b3-9c4159d5a650",
+      "comment": "",
+      "command": "click",
+      "target": "css=.event-card:nth-child(2) p",
+      "targets": [
+        ["css=.event-card:nth-child(2) p", "css:finder"],
+        ["xpath=//div[@id='app']/section/div/div/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Teams from diverse background comes together and play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b94a1f6-4046-4104-9bfa-fb150a6c9860",
+      "comment": "",
+      "command": "click",
+      "target": "css=.event-card:nth-child(3) > .event-card-top",
+      "targets": [
+        ["css=.event-card:nth-child(3) > .event-card-top", "css:finder"],
+        ["xpath=//div[@id='app']/section/div/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40ef87ad-22c6-4404-9744-0e02a336bd7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(6) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('reports')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[6]/button", "xpath:idRelative"],
+        ["xpath=//li[6]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1f55133-8b9e-47c9-a485-f55b373736e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(7) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(7) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('partners')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[7]/button", "xpath:idRelative"],
+        ["xpath=//li[7]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89841217-bb74-463f-9c98-821c4b00f5a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(8) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(8) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('contact')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[8]/button", "xpath:idRelative"],
+        ["xpath=//li[8]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8513a4b0-dd6d-417e-889d-50fd06028319",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(8) > .nav-link",
+      "targets": [
+        ["css=li:nth-child(8) > .nav-link", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('contact')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[8]/button", "xpath:idRelative"],
+        ["xpath=//li[8]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a219bb0-51dd-4a63-9914-5324cd2c679f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=//button[@onclick=\"Router.go('contact')\"]", "xpath:attributes"],
+        ["xpath=//ul[@id='nav-links']/li[8]/button", "xpath:idRelative"],
+        ["xpath=//li[8]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc4df314-b39d-4f6d-ba34-5cee26828f0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-search-btn",
+      "targets": [
+        ["css=.nav-search-btn", "css:finder"],
+        ["xpath=(//button[@onclick='toggleSearch()'])[2]", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/div/div/button", "xpath:idRelative"],
+        ["xpath=//nav/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ffd22f2f-e52b-456a-9508-9838ea6e8165",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["75dd6e75-814a-4362-9b32-7dd9edf825c9"]
+  }],
+  "urls": ["https://saherindia.org/"],
+  "plugins": []
+}

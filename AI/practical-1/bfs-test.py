@@ -13,16 +13,21 @@ def bfs(graph, root, target):
     queue = [root]
 
     while queue:
-        node = queue.pop()
-        if target == node:
+        node = queue.pop(0)  # Queue se front element nikalo
+
+        if node in visited:
+            continue
+
+        visited.add(node)
+        print(node)
+
+        if node == target:
             print("Target Found")
             return
-        else:
-            if node not in visited:
-                queue.extend(graph[root])
-                visited.add(node)
-                print(node)
-    return
+
+        queue.extend(graph[node])
+
+    print("Target Not Found")
 
 
 bfs(graph, 'a', 'd')
