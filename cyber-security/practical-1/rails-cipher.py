@@ -14,7 +14,6 @@ def rail_fence_encrypt(text, key):
             direction = 1
         elif rail == key - 1:
             direction = -1
-
         rail += direction
 
     return ''.join(rails)
@@ -67,8 +66,11 @@ def rail_fence_decrypt(cipher, key):
     return ''.join(result)
 
 
-cipher = rail_fence_encrypt("just testing things", 3)
-plain = rail_fence_decrypt(cipher, 3)
+plain_text = input("Enter Plain Text : ")
+key = int(input("Enter Key : "))
+cipher_text = rail_fence_encrypt(plain_text, key)
 
-print(cipher)
-print(plain)
+
+print("Plain Text : ", plain_text)
+print("Cipher Text : ", cipher_text)
+print("Decrypt Text : ", rail_fence_decrypt(cipher_text, 5))
