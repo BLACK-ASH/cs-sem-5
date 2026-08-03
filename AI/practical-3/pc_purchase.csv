@@ -1,0 +1,12 @@
+Age,Income,Education,Prior Purchase,Buys PC
+Young Adult,High,College,Yes,Yes
+Middle Age,Low,College,No,No
+Middle Age,High,High School,Yes,No
+Senior,Low,College,No,No
+Young Adult,Medium,High School,Yes,Yes
+Senior,High,College,Yes,Yes
+Middle Age,Medium,College,No,No
+Young Adult,Low,High School,No,No
+Middle Age,Low,College,Yes,Yes
+Young Adult,High,College,No,Yes
+Senior,Medium,High School,No,No
