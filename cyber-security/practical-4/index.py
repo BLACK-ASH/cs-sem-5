@@ -8,7 +8,7 @@ private_key = rsa.generate_private_key(
 
 public_key = private_key.public_key()
 
-message = b"Ashif Shaikh"
+message = b"Sachin D. Jaiswal"
 
 signature = private_key.sign(
     message,
@@ -42,7 +42,7 @@ except Exception as e:
     print("The Message Is Authentic And Has Been Modified.")
 
 print("\n")
-modified_message = b"Ashif Sheikh"
+modified_message = b"Bobby D. Jaiswal"
 print("Modified Message : ", modified_message.decode())
 
 try:
