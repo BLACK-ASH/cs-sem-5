@@ -1,0 +1,25 @@
+# cyber-security practicals (excluded by default)
+cyber-security/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+venv/
+.venv/
+.decision/
+.etv/
+
+# Java
+*.class
+*.jar
+
+# Logs / runtime
+logs/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
