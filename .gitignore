@@ -1,6 +1,3 @@
-# cyber-security practicals (excluded by default)
-cyber-security/
-
 # Python
 __pycache__/
 *.py[cod]
