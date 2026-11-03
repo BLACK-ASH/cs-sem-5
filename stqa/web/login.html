@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student sign in · Aldercrest University</title>
+  <meta name="description" content="Sign in to the Aldercrest University student portal.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/login.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Aldercrest University</strong>
+          <small>Student portal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html" aria-current="page">Login</a>
+        <a href="students.html">Students</a>
+        <a href="elements.html">Services</a>
+        <a href="servicedesk.html">IT desk</a>
+        <a href="controls.html">Preferences</a>
+        <a href="upload.html">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-intro">
+      <p class="eyebrow">Student portal</p>
+      <h1>Student sign in</h1>
+      <p class="lead">Use your college account to access results, course preferences, and examination documents.</p>
+    </header>
+
+    <div class="auth-layout">
+      <section class="panel auth-card" aria-labelledby="login-heading">
+        <h2 id="login-heading">Welcome back</h2>
+        <p>Enter your username and password to continue.</p>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" spellcheck="false" placeholder="Enter your username" aria-describedby="loginMessage">
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" aria-describedby="loginMessage">
+          </div>
+
+          <div class="form-row">
+            <button id="loginButton" class="btn" type="submit">Sign in</button>
+            <a href="elements.html">Forgot password?</a>
+          </div>
+        </form>
+
+        <p id="loginMessage" class="form-message" role="status" aria-live="polite" hidden></p>
+
+        <section id="welcomePanel" class="welcome-panel" aria-labelledby="welcomeMessage" hidden>
+          <span class="auth-badge">Signed in</span>
+          <h2 id="welcomeMessage">Welcome, Student User!</h2>
+          <p>Your student dashboard is ready. You can now access results, course preferences, and documents.</p>
+          <button id="logoutButton" class="btn btn-secondary" type="button">Log out</button>
+        </section>
+      </section>
+
+      <aside class="panel side-panel" aria-labelledby="account-heading">
+        <p class="panel-kicker">Portal access</p>
+        <h2 id="account-heading">Sign-in help</h2>
+        <p>Use the username and password issued by the examination cell. Your username is printed on your student identity card.</p>
+        <p class="field-hint">Passwords are case-sensitive. If you have not received your portal account, contact the examination cell.</p>
+        <p class="side-note">Need help with your account? Visit the <a href="elements.html">examination cell</a> or call +91 22 5550 0142.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Aldercrest University · Student portal</p>
+      <p>Academic year 2026–27</p>
+    </div>
+  </footer>
+</body>
+</html>

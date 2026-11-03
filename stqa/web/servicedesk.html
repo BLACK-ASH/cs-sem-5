@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT service desk · Aldercrest University</title>
+  <meta name="description" content="Report a technical problem, book a device check, and track IT requests at Aldercrest University.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/servicedesk.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Aldercrest University</strong>
+          <small>Student portal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="students.html">Students</a>
+        <a href="elements.html">Services</a>
+        <a href="servicedesk.html" aria-current="page">IT desk</a>
+        <a href="controls.html">Preferences</a>
+        <a href="upload.html">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-intro">
+      <p class="eyebrow">Campus IT</p>
+      <h1>IT service desk</h1>
+      <p class="lead">Report a technical problem, book a device check, and follow the progress of requests raised by students and staff.</p>
+    </header>
+
+    <section class="stats-grid" aria-label="Service desk summary">
+      <div class="stat">
+        <span class="stat-label">Open requests</span>
+        <strong id="openRequests" class="stat-value">4</strong>
+        <span class="stat-note">Awaiting a response or repair</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Average first response</span>
+        <strong id="averageResponse" class="stat-value">2.8 h</strong>
+        <span class="stat-note">Requests with a recorded first response</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Resolved</span>
+        <strong id="resolvedRequests" class="stat-value">8</strong>
+        <span class="stat-note">Closed during October</span>
+      </div>
+    </section>
+
+    <div class="desk-layout">
+      <section class="panel table-panel desk-panel" aria-labelledby="queueHeading">
+        <div class="desk-panel-head">
+          <p class="panel-kicker">Request queue</p>
+          <h2 id="queueHeading">Recent requests</h2>
+          <p class="field-hint">Search the queue or narrow it by status and date. Select a column heading to sort.</p>
+        </div>
+
+        <div class="desk-toolbar">
+          <div class="field">
+            <label for="ticketSearch">Search</label>
+            <input id="ticketSearch" name="ticketSearch" type="search" placeholder="Reference, requester, or subject" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="statusFilter">Status</label>
+            <select id="statusFilter" name="statusFilter">
+              <option value="">All statuses</option>
+              <option value="Open">Open</option>
+              <option value="In progress">In progress</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="dateFrom">From</label>
+            <input id="dateFrom" name="dateFrom" type="date">
+          </div>
+          <div class="field">
+            <label for="dateTo">To</label>
+            <input id="dateTo" name="dateTo" type="date">
+          </div>
+          <div class="desk-toolbar-actions">
+            <button id="applyFilters" class="btn" type="button">Apply</button>
+            <button id="clearFilters" class="btn btn-secondary" type="button">Clear</button>
+          </div>
+        </div>
+
+        <div class="table-meta">
+          <span id="ticketCount">Showing 1–5 of 12 requests</span>
+          <span id="filterNote">No filters applied</span>
+        </div>
+
+        <div class="table-scroll">
+          <table id="ticketTable" class="data-table desk-table">
+            <caption>IT service desk requests</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-key="ref" aria-sort="none">
+                  <button class="sort-button" type="button">Reference <span class="sort-icon" aria-hidden="true">↕</span></button>
+                </th>
+                <th scope="col" data-key="subject" aria-sort="none">
+                  <button class="sort-button" type="button">Subject <span class="sort-icon" aria-hidden="true">↕</span></button>
+                </th>
+                <th scope="col" data-key="priority" aria-sort="none">
+                  <button class="sort-button" type="button">Priority <span class="sort-icon" aria-hidden="true">↕</span></button>
+                </th>
+                <th scope="col" data-key="opened" aria-sort="none">
+                  <button class="sort-button" type="button">Opened <span class="sort-icon" aria-hidden="true">↕</span></button>
+                </th>
+                <th scope="col">Status</th>
+                <th scope="col">First response</th>
+              </tr>
+            </thead>
+            <tbody id="ticketRows"></tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button id="prevPage" class="btn btn-secondary btn-sm" type="button">Previous</button>
+          <span id="pageInfo">Page 1 of 3</span>
+          <button id="nextPage" class="btn btn-secondary btn-sm" type="button">Next</button>
+        </div>
+      </section>
+
+      <section class="panel desk-appointments" aria-labelledby="appointmentHeading">
+          <p class="panel-kicker">Appointments</p>
+          <h2 id="appointmentHeading">Book a device check</h2>
+          <p>Bring your laptop or tablet to the IT desk in the library basement. A device check takes about 20 minutes.</p>
+
+          <form id="appointmentForm" class="auth-form" novalidate>
+            <div class="field">
+              <label for="appointmentDate">Preferred date</label>
+              <input id="appointmentDate" name="appointmentDate" type="date" required>
+            </div>
+
+            <fieldset class="fieldset-reset space-top">
+              <legend class="field-label">Time slot</legend>
+              <div class="slot-grid">
+                <label class="slot-card">
+                  <input id="slot0900" name="slot" type="radio" value="09:00">
+                  <span><strong>09:00</strong><small>Available</small></span>
+                </label>
+                <label class="slot-card is-booked">
+                  <input id="slot1030" name="slot" type="radio" value="10:30">
+                  <span><strong>10:30</strong><small>Fully booked</small></span>
+                </label>
+                <label class="slot-card">
+                  <input id="slot1200" name="slot" type="radio" value="12:00">
+                  <span><strong>12:00</strong><small>Available</small></span>
+                </label>
+                <label class="slot-card">
+                  <input id="slot1400" name="slot" type="radio" value="14:00">
+                  <span><strong>14:00</strong><small>Available</small></span>
+                </label>
+                <label class="slot-card">
+                  <input id="slot1530" name="slot" type="radio" value="15:30">
+                  <span><strong>15:30</strong><small>Available</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button id="bookAppointment" class="btn" type="submit">Book appointment</button>
+            </div>
+          </form>
+
+          <p id="appointmentStatus" class="form-message" role="status" aria-live="polite" hidden></p>
+        </section>
+
+      <section class="panel desk-request" aria-labelledby="requestHeading">
+          <p class="panel-kicker">New request</p>
+          <h2 id="requestHeading">Contact the service desk</h2>
+          <p class="field-hint">We reply to most requests within one working day.</p>
+
+          <form id="ticketForm" class="auth-form" novalidate>
+            <div class="field">
+              <label for="requesterName">Full name</label>
+              <input id="requesterName" name="requesterName" type="text" placeholder="Aarav Patel" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="requesterEmail">Email address</label>
+              <input id="requesterEmail" name="requesterEmail" type="email" placeholder="aarav@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="requesterPhone">Mobile number</label>
+              <input id="requesterPhone" name="requesterPhone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="requestCategory">Category</label>
+              <select id="requestCategory" name="requestCategory">
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+                <option value="Network">Network</option>
+                <option value="Accounts">Accounts and access</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field field-full">
+              <label for="requestSubject">Subject</label>
+              <input id="requestSubject" name="requestSubject" type="text" placeholder="Short summary of the problem" required>
+            </div>
+
+            <div class="field field-full">
+              <label for="requestDetails">Description</label>
+              <textarea id="requestDetails" name="requestDetails" rows="4" placeholder="What happened, and what have you already tried?" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button id="submitTicket" class="btn" type="submit">Submit request</button>
+              <button id="clearTicket" class="btn btn-secondary" type="button">Clear</button>
+            </div>
+          </form>
+
+          <p id="ticketFormMessage" class="form-message" role="status" aria-live="polite" hidden></p>
+          <p class="field-hint space-top">For urgent outages, call the service desk on +91 22 5550 0178 during office hours.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Aldercrest University · Student portal</p>
+      <p>Academic year 2026–27</p>
+    </div>
+  </footer>
+</body>
+</html>

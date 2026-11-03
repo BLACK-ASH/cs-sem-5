@@ -1,0 +1,9 @@
+Dockerfile
+.dockerignore
+compose.yaml
+README.md
+defect.md
+stqa_all_practicals.zip
+*.pdf
+.git
+.gitignore

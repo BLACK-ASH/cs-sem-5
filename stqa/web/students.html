@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student records · Aldercrest University</title>
+  <meta name="description" content="Semester 5 student records with search and sortable marks at Aldercrest University.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/students.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Aldercrest University</strong>
+          <small>Student portal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="students.html" aria-current="page">Students</a>
+        <a href="elements.html">Services</a>
+        <a href="servicedesk.html">IT desk</a>
+        <a href="controls.html">Preferences</a>
+        <a href="upload.html">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-intro">
+      <p class="eyebrow">Examination cell · Semester 5</p>
+      <h1>Student records</h1>
+      <p class="lead">Internal assessment marks for the current semester. Search by name or roll number, and use the column headings to sort the records.</p>
+    </header>
+
+    <section class="stats-grid" aria-label="Class summary">
+      <div class="stat">
+        <span class="stat-label">Students</span>
+        <strong class="stat-value"><span id="studentCount">5</span> <small>records</small></strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Class average</span>
+        <strong class="stat-value" id="classAverage">71.3%</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Top percentage</span>
+        <strong class="stat-value"><span id="topStudent">Rohan Mehta</span> <small id="topPercentage">89.0%</small></strong>
+      </div>
+    </section>
+
+    <section class="panel table-panel" aria-labelledby="table-heading">
+      <h2 id="table-heading" class="visually-hidden">Student marks table</h2>
+
+      <div class="table-toolbar">
+        <div class="field">
+          <label for="search">Search students</label>
+          <div class="search-row">
+            <input id="search" name="search" type="search" placeholder="Search by name or roll number" autocomplete="off">
+            <button id="resetSearch" class="btn btn-secondary" type="button">Clear</button>
+          </div>
+        </div>
+        <div class="table-actions">
+          <button id="resetSort" class="btn btn-ghost" type="button">Reset order</button>
+        </div>
+      </div>
+
+      <div class="table-meta">
+        <p id="resultCount" role="status" aria-live="polite">Showing 5 of 5 students</p>
+        <p id="sortStatus" role="status" aria-live="polite">Results published 30 October 2026</p>
+      </div>
+
+      <div class="table-scroll">
+        <table id="studentTable" class="data-table">
+          <caption>Semester 5 internal marks for five students. Java and DBMS are each marked out of 100.</caption>
+          <thead>
+            <tr>
+              <th id="header-name" scope="col" data-key="name" data-label="Student name" aria-sort="none">
+                <button class="sort-button" type="button">Student Name <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+              <th id="header-java" scope="col" data-key="java" data-label="Java marks" aria-sort="none">
+                <button class="sort-button" type="button">Java <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+              <th id="header-dbms" scope="col" data-key="dbms" data-label="DBMS marks" aria-sort="none">
+                <button class="sort-button" type="button">DBMS <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+              <th id="header-roll" scope="col" data-key="roll" data-label="Roll number" aria-sort="none">
+                <button class="sort-button" type="button">Roll Number <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+              <th id="header-total" scope="col" data-key="total" data-label="Total marks" aria-sort="none">
+                <button class="sort-button" type="button">Total <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+              <th id="header-percentage" scope="col" data-key="percentage" data-label="Percentage" aria-sort="none">
+                <button class="sort-button" type="button">Percentage <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+              <th id="header-result" scope="col" data-key="result" data-label="Result" aria-sort="none">
+                <button class="sort-button" type="button">Result <span class="sort-icon" aria-hidden="true">↕</span></button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="student-01" data-student>
+              <td class="student-name" data-column="name">Rahul Sharma</td>
+              <td data-column="java" data-sort-value="75">75</td>
+              <td data-column="dbms" data-sort-value="55">55</td>
+              <td data-column="roll">AC-2026-001</td>
+              <td data-column="total" data-sort-value="130">130 / 200</td>
+              <td data-column="percentage" data-sort-value="65">65.0%</td>
+              <td data-column="result" data-sort-value="Pass"><span class="pill pill-pass">Pass</span></td>
+            </tr>
+            <tr id="student-02" data-student>
+              <td class="student-name" data-column="name">Priya Nair</td>
+              <td data-column="java" data-sort-value="45">45</td>
+              <td data-column="dbms" data-sort-value="70">70</td>
+              <td data-column="roll">AC-2026-002</td>
+              <td data-column="total" data-sort-value="115">115 / 200</td>
+              <td data-column="percentage" data-sort-value="57.5">57.5%</td>
+              <td data-column="result" data-sort-value="Pass"><span class="pill pill-pass">Pass</span></td>
+            </tr>
+            <tr id="student-03" data-student>
+              <td class="student-name" data-column="name">Amit Verma</td>
+              <td data-column="java" data-sort-value="85">85</td>
+              <td data-column="dbms" data-sort-value="80">80</td>
+              <td data-column="roll">AC-2026-003</td>
+              <td data-column="total" data-sort-value="165">165 / 200</td>
+              <td data-column="percentage" data-sort-value="82.5">82.5%</td>
+              <td data-column="result" data-sort-value="Pass"><span class="pill pill-pass">Pass</span></td>
+            </tr>
+            <tr id="student-04" data-student>
+              <td class="student-name" data-column="name">Neha Kulkarni</td>
+              <td data-column="java" data-sort-value="60">60</td>
+              <td data-column="dbms" data-sort-value="65">65</td>
+              <td data-column="roll">AC-2026-004</td>
+              <td data-column="total" data-sort-value="125">125 / 200</td>
+              <td data-column="percentage" data-sort-value="62.5">62.5%</td>
+              <td data-column="result" data-sort-value="Pass"><span class="pill pill-pass">Pass</span></td>
+            </tr>
+            <tr id="student-05" data-student>
+              <td class="student-name" data-column="name">Rohan Mehta</td>
+              <td data-column="java" data-sort-value="90">90</td>
+              <td data-column="dbms" data-sort-value="88">88</td>
+              <td data-column="roll">AC-2026-005</td>
+              <td data-column="total" data-sort-value="178">178 / 200</td>
+              <td data-column="percentage" data-sort-value="89">89.0%</td>
+              <td data-column="result" data-sort-value="Pass"><span class="pill pill-pass">Pass</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Aldercrest University · Student portal</p>
+      <p>Academic year 2026–27</p>
+    </div>
+  </footer>
+</body>
+</html>

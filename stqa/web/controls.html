@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course preferences · Aldercrest University</title>
+  <meta name="description" content="Select an elective and workshops for the upcoming semester at Aldercrest University.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/controls.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Aldercrest University</strong>
+          <small>Student portal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="students.html">Students</a>
+        <a href="elements.html">Services</a>
+        <a href="servicedesk.html">IT desk</a>
+        <a href="controls.html" aria-current="page">Preferences</a>
+        <a href="upload.html">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-intro">
+      <p class="eyebrow">Academic planning</p>
+      <h1>Course preferences</h1>
+      <p class="lead">Choose one elective for the next semester and mark the workshops you plan to attend.</p>
+    </header>
+
+    <div class="controls-grid">
+      <section class="panel" aria-labelledby="dropdownHeading">
+        <p class="panel-kicker">Elective</p>
+        <h2 id="dropdownHeading">Choose one subject</h2>
+        <p class="field-hint">You can select a single elective from the list.</p>
+
+        <div class="field space-top">
+          <label for="dropdown">Elective subject</label>
+          <select id="dropdown" name="elective">
+            <option value="">Select an elective</option>
+            <option value="data-science">Data Science</option>
+            <option value="cloud-computing">Cloud Computing</option>
+            <option value="cyber-security">Cyber Security</option>
+            <option value="mobile-development">Mobile Development</option>
+          </select>
+        </div>
+
+        <p id="dropdownStatus" class="dropdown-preview" role="status" aria-live="polite">
+          <span>Current selection</span>
+          <strong id="selectedOption">No elective selected</strong>
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="checkboxHeading">
+        <p class="panel-kicker">Workshops</p>
+        <h2 id="checkboxHeading">Workshops to attend</h2>
+        <p class="field-hint">Choose any workshops that interest you.</p>
+
+        <fieldset class="fieldset-reset space-top">
+          <legend class="visually-hidden">Workshops to attend</legend>
+          <div class="checkbox-grid">
+            <label class="check-card">
+              <input id="checkboxJava" name="workshop" type="checkbox" value="java">
+              <span><strong>Java</strong><small>4 sessions</small></span>
+            </label>
+            <label class="check-card">
+              <input id="checkboxDbms" name="workshop" type="checkbox" value="dbms" checked>
+              <span><strong>DBMS</strong><small>3 sessions</small></span>
+            </label>
+            <label class="check-card">
+              <input id="checkboxTesting" name="workshop" type="checkbox" value="testing">
+              <span><strong>Software Testing</strong><small>5 sessions</small></span>
+            </label>
+            <label class="check-card">
+              <input id="checkboxNetworks" name="workshop" type="checkbox" value="networks" checked>
+              <span><strong>Networks</strong><small>4 sessions</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="checkbox-toolbar">
+          <label class="select-all">
+            <input id="selectAll" name="selectAll" type="checkbox">
+            Select all workshops
+          </label>
+          <button id="resetSubjects" class="btn btn-ghost" type="button">Reset selection</button>
+        </div>
+
+        <p id="selectionStatus" class="selection-note" role="status" aria-live="polite">2 of 4 workshops selected.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Aldercrest University · Student portal</p>
+      <p>Academic year 2026–27</p>
+    </div>
+  </footer>
+</body>
+</html>

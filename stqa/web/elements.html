@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student services · Aldercrest University</title>
+  <meta name="description" content="Contact the Aldercrest University examination cell and find student support links.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/services.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Aldercrest University</strong>
+          <small>Student portal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="students.html">Students</a>
+        <a href="elements.html" aria-current="page">Services</a>
+        <a href="servicedesk.html">IT desk</a>
+        <a href="controls.html">Preferences</a>
+        <a href="upload.html">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-intro">
+      <p class="eyebrow">Student support</p>
+      <h1>Student services</h1>
+      <p class="lead">Contact the examination cell for document requests, result corrections, or general help with your student account.</p>
+    </header>
+
+    <div class="services-layout">
+      <section class="panel" aria-labelledby="formHeading">
+        <p class="panel-kicker">Send an enquiry</p>
+        <h2 id="formHeading">How can we help?</h2>
+        <p class="field-hint">Our team usually replies within two working days.</p>
+
+        <form id="enquiryForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Aarav Patel" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="rollNumber">Roll number</label>
+            <input id="rollNumber" name="rollNumber" type="text" placeholder="AC-2026-014" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label for="emailAddress">Email address</label>
+            <input id="emailAddress" name="emailAddress" type="email" placeholder="aarav@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you need help with" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button id="sendButton" class="btn" type="submit">Send message</button>
+            <button id="clearForm" class="btn btn-secondary" type="reset">Clear form</button>
+          </div>
+        </form>
+
+        <p id="formMessage" class="form-message" role="status" aria-live="polite" hidden></p>
+      </section>
+
+      <div class="services-side">
+        <section class="panel" aria-labelledby="contactHeading">
+          <p class="panel-kicker">Examination cell</p>
+          <h2 id="contactHeading">Visit or contact us</h2>
+          <dl class="contact-list">
+            <div>
+              <dt>Office</dt>
+              <dd>Room 204, Academic Block</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>examinations@aldercrest.edu</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd>+91 22 5550 0142</dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <dd>Monday to Friday, 10:00–16:00</dd>
+            </div>
+          </dl>
+
+          <h3 id="helpLinksHeading" class="space-top">Helpful links</h3>
+          <div class="link-list" aria-labelledby="helpLinksHeading">
+            <a id="studentTableLink" href="students.html">Student records <span>Semester 5</span></a>
+            <a id="preferencesLink" href="controls.html">Course preferences <span>Electives</span></a>
+            <a id="documentsLink" href="upload.html">Documents <span>Upload &amp; download</span></a>
+            <a id="serviceDeskLink" href="servicedesk.html">IT service desk <span>Tickets &amp; appointments</span></a>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="campusHeading">
+          <p class="panel-kicker">On campus</p>
+          <h2 id="campusHeading">Student spaces</h2>
+          <div class="gallery">
+            <figure>
+              <img id="campusImage" src="assets/campus.svg" alt="Illustration of the Aldercrest University campus building">
+              <figcaption>Academic Block</figcaption>
+            </figure>
+            <figure>
+              <img id="libraryImage" src="assets/library.svg" alt="Illustration of the college library bookshelves">
+              <figcaption>Central Library</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Aldercrest University · Student portal</p>
+      <p>Academic year 2026–27</p>
+    </div>
+  </footer>
+</body>
+</html>

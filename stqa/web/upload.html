@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documents · Aldercrest University</title>
+  <meta name="description" content="Submit assignment files and download examination documents from the Aldercrest University student portal.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/upload.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Aldercrest University</strong>
+          <small>Student portal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="students.html">Students</a>
+        <a href="elements.html">Services</a>
+        <a href="servicedesk.html">IT desk</a>
+        <a href="controls.html">Preferences</a>
+        <a href="upload.html" aria-current="page">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-intro">
+      <p class="eyebrow">Student services</p>
+      <h1>Documents</h1>
+      <p class="lead">Submit assignment files and download official examination documents from the student portal.</p>
+    </header>
+
+    <div class="upload-grid">
+      <section class="panel" aria-labelledby="uploadHeading">
+        <p class="panel-kicker">Assignment upload</p>
+        <h2 id="uploadHeading">Submit a document</h2>
+        <p class="field-hint">Choose a file from your computer and confirm the upload.</p>
+
+        <form id="uploadForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="fileUpload">Document file</label>
+            <input id="fileUpload" class="file-input" name="fileUpload" type="file" accept=".pdf,.doc,.docx,.txt">
+            <span class="field-hint">Accepted formats: PDF, DOC, DOCX, TXT. Maximum size: 5 MB.</span>
+          </div>
+
+          <div id="fileInfo" class="file-info">
+            <strong id="fileName">No file selected</strong>
+            <span id="fileDetails">Choose a file to see its name, size, and type.</span>
+          </div>
+
+          <p id="uploadStatus" class="form-message" role="status" aria-live="polite" hidden></p>
+
+          <div class="upload-actions">
+            <button id="uploadButton" class="btn" type="submit">Upload</button>
+            <button id="clearUpload" class="btn btn-secondary" type="button">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel download-card" aria-labelledby="downloadHeading">
+        <p class="panel-kicker">Downloads</p>
+        <div class="download-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12"/>
+            <path d="m7 10 5 5 5-5"/>
+            <path d="M4 19h16"/>
+          </svg>
+        </div>
+        <h2 id="downloadHeading">Examination documents</h2>
+        <p>Download the semester 5 examination guidelines issued by the examination cell.</p>
+        <div class="download-meta">
+          <span class="meta-chip">examination-guidelines.txt</span>
+          <span class="meta-chip">text/plain</span>
+        </div>
+        <a id="downloadFile" class="btn" href="assets/examination-guidelines.txt" download="examination-guidelines.txt" title="Download examination-guidelines.txt">Download File</a>
+        <p class="download-note">Need another document? <a href="elements.html">Contact the examination cell</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Aldercrest University · Student portal</p>
+      <p>Academic year 2026–27</p>
+    </div>
+  </footer>
+</body>
+</html>
